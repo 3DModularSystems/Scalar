@@ -1,0 +1,75 @@
+Marlin firmware 1.1.0-RC6 Changelog:
+
+========================================EN=====================================================
+
+Here is the list of the most important changes / updates on this firmware
+
+Special note regarding Firmware default language
+
+This firmware is configured in french so make sure you change it according to your language.
+
+# Firmware features
+* Improved USB comunication with 3rd party host softwares
+* Mesh bed leveling (using bilinear interpolation) feature is available and usable. This feature can be enabled only on firmware configuration.
+This feature allows to compensate for imperfect flat print surface.
+* Auto bed leveling probe sequence is slightly different
+* No need to restart to printer anymoire between 2 prints.
+* Cooling fans now have a Kickstart time that will allow them to start even at slow speed.
+* Cooling fans also have a minimum speed
+* Firmware allows use 1 stepper driver per Z motor (selectable in firmware configuration_adv.h). In this case E1 stepper motor driver is used to drive the 2nd Z motor.
+Enable Z_DUAL_STEPPER_DRIVERS to make this feature active.
+* 3Rd party host software can now ask for long filename files.
+
+
+# LCD
+* New Change filament menu
+* Some manual bed leveling menus are now available
+* You can adjust the Z offset while printing. very usefull during the first layer if your offset incorrect. (See babysteps new menus)
+* The button sensitivity has been updated, user should find it easier to set parameters with the LCD knob.
+* A progress bar has been enabled
+* A few language typos have been updated/fixed
+* Reduced LCD updated to reduce CPU usage.
+* A marlin spashscreen has been added with the firmware version.
+
+
+
+# feature not available: 
+* Smoke detection feature has not been ported yet on this firmware version.
+Please consider using the previous version to keep the smoke detection enabled.
+
+
+========================================FR=====================================================
+Voici la liste des changements les plus importants sur cette version de firmware
+
+Cette version de firmware est configurée par défaut pour utiliser la langue Française. Veuillez la changer dans le fichier configuration.h en fonction de votre langue préférée
+
+
+# Fonctionalités du Firmware
+* Comunication USB amélioré avec les logiciels de pilotage tiers
+* La mise à niveau automatique du plateau (Mesh bed leveling) par interpolation bilinéaire est maintenant utilisable.Cette fonctionalité est à activer dans le fichier configuration.h du firmare.
+Cette fonctionalité permet de compenser un plateau bombé.
+
+* La séquence de mise à niveau automatique du lit (Auto bed leveling) à été légèrement modifiée.
+* Aucun besoin de redémarer la machine entre 2 impressions.
+* les ventilateurs possèdent maintenant une fonction de "Kickstart time" qui leur permettent de démarer sans problème même à basses vitesses.
+* Les ventilateurs auxiliaires ont maintenant une vitesse minimale d'utilisation.
+* le firmware permet de piloter les 2 moteurs de l'axe Z séparément e connectant le deuxième moteur sur le driver moteur du deuxième extrudeur (E1) sur la carte Ramps.
+Il faut activer Enable Z_DUAL_STEPPER_DRIVERS dans le fichier de configuration.adv.h afin d'activer cette fonctionalité.
+* les logiciels de pilotage tiers peuvent mainenant demander des noms de fichier long.
+
+
+# LCD
+* nouveau menu "Changement de filament"
+* Des menus ont été rajouté pour la mise à niveau du plateau.
+* Vous pouvez ajuster la position en Z pendant l'imppresion. SPécialement utile si votre ZOffset est mal réglé pendant l'impression de votre première couche.
+* La sensibilité du bouton rotatif de l'afficheur à été amélioré. L'utilisateur devrait arriver plus facilement à metre à jours les paramètres.
+* une bare de progression à été rajouté
+* Quelques typos ont été corrigées.
+* Le rafraichissement du LCD à été optimisé pour réduire la consomation de CPU.
+* Une image de démarage avec la version du firmware a été rajouté.
+
+
+
+# Fonctionalités non disponibles:
+* Le support pour le détecteur de fumée n'as pas encore été porté sur cette version du firmware.
+Si vous voulez conserver l'utilisation de votre détecteur de fumée veuillez utiliser la version précédente du firmware.
