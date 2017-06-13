@@ -5,7 +5,7 @@ G90        ;absolute positioning
 M82        ;set extruder to absolute mode
 M107       ;start with the fan off
 G28  ;move X/Y to min endstops
-G29     ;move Z to min endstops
+G29 L60 F50 R140 B150
 G1 Z15.0 F7200 ;move the platform down 15mm
 G92 E0                  ;zero the extruded length
 G1 F200 E15            ;extrude 3mm of feed stock
@@ -13,7 +13,6 @@ G92 E0                  ;zero the extruded length again
 G1 F7200
 ;Put printing message on LCD screen
 M117 Printing...
-
 ;Layer count: 100
 ;LAYER:0
 M107
@@ -19123,4 +19122,27 @@ G28 X0 Y0                              ;move X/Y to min endstops, so the head is
 M84                         ;steppers off
 G90                         ;absolute positioning
 ;CURA_PROFILE_STRING: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
+
+;Music
+M300 S2349 P53
+M300 S0 P53
+M300 S2349 P53
+M300 S0 P53
+M300 S2349 P53
+M300 S0 P53
+M300 S2349 P428
+M300 S932 P428
+M300 S2093 P428
+M300 S2349 P107
+M300 S0 P214
+M300 S2093 P107
+
+;Shutting down sequence
+M117 Waiting cooldown
+M106 S255
+M109 R40.00
+M190 R40.00
+M106 S0
+M81
+M117 Shutdown
 
