@@ -1,0 +1,200 @@
+﻿2017.09.22 - Marlin Firmware 1.1.5 Changelog:
+========================================EN=====================================================
+* Add Custom commands LCD menu
+* Rework Pause feature, it's now called "Advanced Pause". It now allows to cool down the heating elements while waiting for user input during filament change.
+* Allows to cut down heatbed during auto bed leveling
+* Supports Inch mode
+* Some LCD menus have been grouped
+* Add Enclosure lighting features
+* Allows different modes of LCD filename sorting (disabled by default)
+* BabyStep Z features is triggered by pressing twice the knob button
+* Adding a probing delay 
+* Fix some bugs on M600 (filament change)
+* Status messages can scroll on the LCD (disabled by default)
+* Prevent filament change without Homing
+* Display rate adjusts dynamically to prevent print stuttering
+* End stops management optimized
+========================================FR=====================================================
+* Ajout d'une menu "Custom" pouvant intégrer des Commandes personalisés
+* La fonctionalité de "Pause" (M600) à été retravaillé et est maintenant appelé "Pause avancé". Elle permet en partie de faire refroidir les éléments chauffant lorsque la machine est en pause ou en attente de changement de filament.
+* Permet de couper les éléments chauffant pendant les phases d'auto-nivellement
+* Certains menus ont été groupés
+* Ajout de la gestion lumineuse des caissons d'imprimante 3D.
+* Permet différent modes de trie des noms de fichier au niveau de l'afficheur LCD.
+* La fonction "BabyStep Z" est maintenant disponible par l'appuis 2 fois consécutives sur le bouton de l'afficheur LCD.
+* Ajout d'une délais lors de l'auto-nivellement.
+* Quelques bugs ont été fixé autour de la fonction M600 (changement de filament)
+* Les messages de status peuvent se déplacer sur l'écran LCD (désactivé par défaut)
+* Interdit le changement de filament sans avoir effectué de homing préalablement.
+* La fréquence d'affichage s'ajuste automatiquement afin d'éviter les micros pauses durant l'impression
+* La gestion des fin des course à été optimisée.
+
+
+
+
+2017.01.25 - Marlin firmware 1.1.0-RC8 Changelog:
+
+========================================EN=====================================================
+
+* Major performance improvement for Graphical LCDs
+* Simplified probe configuration
+* Reduce serial communication errors
+* Add M211 to Enable/Disable Software Endstops
+* Add M355 to turn the case light on/off and set brightness
+* Add G38.2 G38.3 command option for CNC style probing
+* Add R parameter support for G2/G3
+* New and updated languages
+
+=========From RC7
+
+* Add Print Job Timer and Print Counter (PRINTCOUNTER)
+* New M600 Filament Change (FILAMENT_CHANGE_FEATURE)
+* New G12 Nozzle Clean (NOZZLE_CLEAN_FEATURE)
+* New G27 Nozzle Park (NOZZLE_PARK_FEATURE)
+* Add a new Advance Extrusion algorithm (LIN_ADVANCE)
+* Add support for inches, Fahrenheit, Kelvin units (INCH_MODE_SUPPORT, TEMPERATURE_UNITS_SUPPORT)
+* Better handling of G92 shifting of the coordinate space
+* Add Greek and Croatian languages
+* Improve the Manual (Mesh) Bed Leveling user interface
+* Add support for more boards, controllers, and probes:
+  - Vellemann K8400 (BOARD_K8400)
+  - RigidBot V2 (BOARD_RIGIDBOARD_V2)
+  - Cartesio UI (BOARD_CNCONTROLS_12)
+  - BLTouch probe sensor (BLTOUCH)
+  - Viki 2 with RAMPS and MKS boards
+* Improve thermal management, add WATCH_BED_TEMP_PERIOD
+* Better handling of toolchange, multiple tools
+* Add support for SINGLENOZZLE, MIXING_EXTRUDER, and SWITCHING_EXTRUDER
+* Simplified probe configuration, allow usage without bed leveling
+* Fix wait-for-cooling in M109 / M190
+* Optimizations for single-hotend setups
+* Support for prints over 18h 12m 15s in the print counter
+* Fix issues with G28 when T0 isn't the active tool
+* Improved axis movement from the LCD controller
+* Add individual axis homing to the LCD menu
+* Add Printer Info and Printer Statistics to the LCD menu
+
+
+========================================FR=====================================================
+
+* Amélioration significative des performances pour l'afficheur LCD graphique
+* Configuration simplifiée de la sonde.
+* amélioration de la fiabilité de la liaison série
+* Ajout M211 pour Activer/Désactiver les fin de course logiciels
+* Ajout M355 pour allumer/éteindre la limière du boitier et modifier la luminosité.
+* Ajout G38.2 G38.3 qui fournissent un mode de mise à niveau de type CNC
+* Ajout du paramètre R pour les commandes G2/G3
+* Nouvelles langues et mises à jours des langues déjà existantes
+
+========= Depuis RC7
+
+* Ajout d'un menu statistique d'impression (PRINTCOUNTER)
+* Ajout de la commande M600 qui permet le changement de filament automatique (FILAMENT_CHANGE_FEATURE)
+* Ajout de G12 qui permet de néttoyer la buse (NOZZLE_CLEAN_FEATURE)
+* Ajout de G27 qui permet de parquer la tête d'impression (NOZZLE_PARK_FEATURE)
+* Ajout de l'algo d'avance d'extrusion (LIN_ADVANCE)
+* Ajout du support pour les pouces, Fahrenheit, Kelvin (INCH_MODE_SUPPORT, TEMPERATURE_UNITS_SUPPORT)
+* Meilleur gestion de G92
+* Ajout des langues grèque et croate
+* Amélioration des modes de mise à niveau automatique
+* Ajout de nouvelles cartes / matériels
+  - Vellemann K8400 (BOARD_K8400)
+  - RigidBot V2 (BOARD_RIGIDBOARD_V2)
+  - Cartesio UI (BOARD_CNCONTROLS_12)
+  - BLTouch probe sensor (BLTOUCH)
+  - Viki 2 avec RAMPS et carte MKS
+* Amélioation de la gestion thermique, ajout de WATCH_BED_TEMP_PERIOD
+* Amélioration de la gestion du changement d'outils, multiples outils
+* Ajout du support pour simple tête ( SINGLENOZZLE), extrudeur à mixage de couleurs (MIXING_EXTRUDER), et extrudeur pivatables (SWITCHING_EXTRUDER)
+* Gestion simplifiée de la mise à niveau automatique
+* correction des attentes blocates M109 / M190
+* Optimizations for single-hotend setups
+* Le compteur de temps d'impression supporte maintenant des impression plus longues que 18h 12m 15s
+* Correction de la commande G28 quand T0 n'est pas l'outil actif
+* Amélioration des mouvents via l'afficheur LCD
+* Ajout des axes individuels pour les phases de homing
+* Ajout des informations d'impression et de statistiques au niveau d'un nouveau menu du LCD.
+
+
+
+
+
+
+
+
+
+2016.07.27 - Marlin firmware 1.1.0-RC6 Changelog:
+
+========================================EN=====================================================
+
+Here is the list of the most important changes / updates on this firmware
+
+Special note regarding Firmware default language
+
+This firmware is configured in french so make sure you change it according to your language.
+
+# Firmware features
+* Improved USB comunication with 3rd party host softwares
+* Mesh bed leveling (using bilinear interpolation) feature is available and usable. This feature can be enabled only on firmware configuration.
+This feature allows to compensate for imperfect flat print surface.
+* Auto bed leveling probe sequence is slightly different
+* No need to restart to printer anymoire between 2 prints.
+* Cooling fans now have a Kickstart time that will allow them to start even at slow speed.
+* Cooling fans also have a minimum speed
+* Firmware allows use 1 stepper driver per Z motor (selectable in firmware configuration_adv.h). In this case E1 stepper motor driver is used to drive the 2nd Z motor.
+Enable Z_DUAL_STEPPER_DRIVERS to make this feature active.
+* 3Rd party host software can now ask for long filename files.
+
+
+# LCD
+* New Change filament menu
+* Some manual bed leveling menus are now available
+* You can adjust the Z offset while printing. very usefull during the first layer if your offset incorrect. (See babysteps new menus)
+* The button sensitivity has been updated, user should find it easier to set parameters with the LCD knob.
+* A progress bar has been enabled
+* A few language typos have been updated/fixed
+* Reduced LCD updated to reduce CPU usage.
+* A marlin spashscreen has been added with the firmware version.
+
+
+
+# feature not available: 
+* Smoke detection feature has not been ported yet on this firmware version.
+Please consider using the previous version to keep the smoke detection enabled.
+
+
+========================================FR=====================================================
+Voici la liste des changements les plus importants sur cette version de firmware
+
+Cette version de firmware est configurée par défaut pour utiliser la langue Française. Veuillez la changer dans le fichier configuration.h en fonction de votre langue préférée
+
+
+# Fonctionalités du Firmware
+* Comunication USB amélioré avec les logiciels de pilotage tiers
+* La mise à niveau automatique du plateau (Mesh bed leveling) par interpolation bilinéaire est maintenant utilisable.Cette fonctionalité est à activer dans le fichier configuration.h du firmare.
+Cette fonctionalité permet de compenser un plateau bombé.
+
+* La séquence de mise à niveau automatique du lit (Auto bed leveling) à été légèrement modifiée.
+* Aucun besoin de redémarer la machine entre 2 impressions.
+* les ventilateurs possèdent maintenant une fonction de "Kickstart time" qui leur permettent de démarer sans problème même à basses vitesses.
+* Les ventilateurs auxiliaires ont maintenant une vitesse minimale d'utilisation.
+* le firmware permet de piloter les 2 moteurs de l'axe Z séparément e connectant le deuxième moteur sur le driver moteur du deuxième extrudeur (E1) sur la carte Ramps.
+Il faut activer Enable Z_DUAL_STEPPER_DRIVERS dans le fichier de configuration.adv.h afin d'activer cette fonctionalité.
+* les logiciels de pilotage tiers peuvent mainenant demander des noms de fichier long.
+
+
+# LCD
+* nouveau menu "Changement de filament"
+* Des menus ont été rajouté pour la mise à niveau du plateau.
+* Vous pouvez ajuster la position en Z pendant l'imppresion. SPécialement utile si votre ZOffset est mal réglé pendant l'impression de votre première couche.
+* La sensibilité du bouton rotatif de l'afficheur à été amélioré. L'utilisateur devrait arriver plus facilement à metre à jours les paramètres.
+* une bare de progression à été rajouté
+* Quelques typos ont été corrigées.
+* Le rafraichissement du LCD à été optimisé pour réduire la consomation de CPU.
+* Une image de démarage avec la version du firmware a été rajouté.
+
+
+
+# Fonctionalités non disponibles:
+* Le support pour le détecteur de fumée n'as pas encore été porté sur cette version du firmware.
+Si vous voulez conserver l'utilisation de votre détecteur de fumée veuillez utiliser la version précédente du firmware.
